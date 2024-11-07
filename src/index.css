@@ -208,3 +208,30 @@ a:hover {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  header .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  main .item {
+    max-width: 100%;
+  }
+
+  header .basket {
+    width: 100%;
+    right: 0;
+  }
+}
