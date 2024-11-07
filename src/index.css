@@ -208,6 +208,7 @@ a:hover {
   color: white;
 }
 
+/* Mobile Mode (up to 768px) */
 @media (max-width: 768px) {
   .wrapper {
     width: 95%;
@@ -221,13 +222,26 @@ a:hover {
     gap: 10px;
   }
 
+  /* Adjust main grid layout to display two items per row on mobile */
   main {
-    flex-direction: column;
-    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Set two equal columns */
+    gap: 10px;
+    padding: 10px;
   }
 
-  main .item {
-    max-width: 100%;
+  /* Reduce product image size for mobile */
+  main .item img {
+    width: 100%; /* Make image fill the container width */
+    max-width: 100px; /* Limit max size */
+    margin: 0 auto; /* Center image within item container */
+  }
+
+  /* Map image size control */
+  .map {
+    width: 100%; /* Fit screen width */
+    max-width: 350px; /* Cap max width for mobile */
+    margin: 10px auto;
   }
 
   header .basket {
@@ -235,3 +249,4 @@ a:hover {
     right: 0;
   }
 }
+
